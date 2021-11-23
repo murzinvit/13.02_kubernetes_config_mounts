@@ -18,6 +18,8 @@
 * все бекенды подключаются к одному PV в режиме ReadWriteMany; </br>
 * фронтенды тоже подключаются к этому же PV с таким же режимом; </br>
 * файлы, созданные бекендом, должны быть доступны фронту. </br>
+Создал 2 pvc в неймспейс prod: YAML для создания pvc: [2_pvc_in_prod.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/2_pvc_in_prod.yaml). Поднял 3 деплоймента из. YAML для создания deployments: [make_deployment_app.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/make_deployment_app.yaml) </br>
+
 
 
 ### Рабочие заметки: </br>
