@@ -11,10 +11,11 @@ spec:
   volumes:
   - name: file-storage
     persistentVolumeClaim:
-      claimName: nfs-volume-claim
+      claimName: file-volume-claim
   - name: db-storage
     persistentVolumeClaim:
       claimName: db-volume-claim
+
   containers:
   - name: backend
     image: murzinvit/backend:latest
@@ -22,12 +23,14 @@ spec:
     volumeMounts:
     - name: file-storage
       mountPath: /mnt
+
   - name: db
     image: murzinvit/db:latest
     imagePullPolicy: IfNotPresent
     volumeMounts:
     - name: db-storage
       mountPath: /var/lib/
+
   - name: frontend
     image: murzinvit/frontend:latest
     imagePullPolicy: IfNotPresent
