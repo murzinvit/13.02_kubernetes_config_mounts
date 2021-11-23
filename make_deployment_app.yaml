@@ -58,7 +58,7 @@ spec:
         - containerPort: 9000
         env:
         - name: DATABASE_URL
-          value: postgres://postgres:postgres@db:5432/news
+          value: postgres://postgres:postgres@db-service:5432/news
         volumeMounts:
         - name: file-storage
           mountPath: /mnt
