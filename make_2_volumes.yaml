@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-volume-claim
+spec:
+  storageClassName: nfs
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Mi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nfs-volume-claim
+spec:
+  storageClassName: nfs
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+
