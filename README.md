@@ -25,3 +25,4 @@
 * установить helm: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash </br>
 * добавить репозиторий чартов: helm repo add stable https://charts.helm.sh/stable && helm repo update </br>
 * установить nfs-server через helm: helm install nfs-server stable/nfs-server-provisioner </br>
+`kubectl exec netology-devops6-app -c frontend -it -- bash` </br>
