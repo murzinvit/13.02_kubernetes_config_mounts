@@ -1,4 +1,4 @@
-### Домашнее задание к занятию "13.2 разделы и монтирование"  </br>
+## Домашнее задание к занятию "13.2 разделы и монтирование"  </br>
 Приложение запущено и работает, но время от времени появляется необходимость передавать между бекендами данные. А сам бекенд генерирует статику для фронта. Нужно оптимизировать это. </br>
 
 ### Задание 1: подключить для тестового конфига общую папку </br>
@@ -18,8 +18,12 @@
 * все бекенды подключаются к одному PV в режиме ReadWriteMany; </br>
 * фронтенды тоже подключаются к этому же PV с таким же режимом; </br>
 * файлы, созданные бекендом, должны быть доступны фронту. </br>
-Создал 2 pvc в неймспейс prod: YAML для создания pvc: [2_pvc_in_prod.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/2_pvc_in_prod.yaml). Поднял 3 деплоймента из. YAML для создания deployments: [make_deployment_app.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/make_deployment_app.yaml) </br>
-
+Создал 2 pvc в неймспейс prod: YAML для создания pvc: [2_pvc_in_prod.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/2_pvc_in_prod.yaml) </br>
+Поднял 3 деплоймента из. YAML для создания deployments: [make_deployment_app.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/e8ee65769ed4eec97f601a1edb20c0127de4985d/make_deployment_app.yaml) </br>
+Зашёл на под в деплойменте backend и создал файл hello2 в папке /mnt (где примонтирован pvc): </br>
+![Kuber_hello2_in_deployment](https://github.com/murzinvit/screen/blob/dc6224596a2298da2236da21169d8ce5bc52bb61/Kuber_hello2_in_deployment.jpg) </br>
+Зашёл в под в деплойменте frontend в папку /mnt: </br>
+![Kuber_hello2_in_front](https://github.com/murzinvit/screen/blob/584f3bc470582e5543e0d23b4a01dfa47c6de594/Kuber_hello2_in_front.jpg) </br>
 
 
 ### Рабочие заметки: </br>
