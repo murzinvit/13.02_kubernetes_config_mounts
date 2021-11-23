@@ -4,15 +4,17 @@ kind: Pod
 metadata:
   name: netology-devops6-app
   namespace: default
+
 spec:
   restartPolicy: Never
+
   volumes:
   - name: file-storage
     persistentVolumeClaim:
       claimName: nfs-volume-claim
   - name: db-storage
     persistentVolumeClaim:
-      claimName: db-storage
+      claimName: db-volume-claim
   containers:
   - name: backend
     image: murzinvit/backend:latest
