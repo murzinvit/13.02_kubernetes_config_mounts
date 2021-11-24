@@ -5,6 +5,7 @@
 * в поде подключена общая папка между контейнерами (например, /static); </br>
 * после записи чего-либо в контейнере с беком файлы можно получить из контейнера с фронтом. </br>
 Установил nfs сервис через helm, и создал 2 pvc. YAML для pvc: [make_2_volumes.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/02e0d8a13c6d3df1eb7df4ae46d261d26e364173/make_2_volumes.yaml), YAML для pod: [make_pod3.yaml](https://github.com/murzinvit/13.02_kubernetes_config_mounts/blob/02e0d8a13c6d3df1eb7df4ae46d261d26e364173/make_pod3.yaml) </br>
+Важный момент установка на каждой ноде драйвера nfs-common </br>
 Первый для БД, второй как общая папка для контейнеров: </br>
 ![2_claims_db_nfs](https://github.com/murzinvit/screen/blob/507b8da79b31bd402904c0a9c28fca6cca8c735f/Kuber_2_claims_db_nfs.jpg) </br>
 Зашёл в контейнер backend в поде netology-devops6-app и в папке /mnt создал файл - hello: </br>
